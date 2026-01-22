@@ -1,0 +1,165 @@
+
+/* **************************HEADER**********************************/
+header{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+height: 20vh;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+header nav ul{
+list-style: none;
+display: flex ;
+justify-content: center;
+gap: 40px
+
+}
+header nav ul li a:hover{
+    background-color: rgb(34, 13, 108);
+    color: white;
+}
+.color-enlace{
+    background-color: white;
+    color: rgba(48, 7, 180, 0.353) ;
+}
+
+
+/********************MAIN**************************************** */
+
+
+/* -----------CARD---------------------- */
+
+.cards-inicio{
+display: flex;
+justify-content: center;
+gap: 30px;
+margin-bottom: 60px;
+}
+
+.remeras-con-precio img{
+width: 150px;
+}
+
+/*-----------MAPS------------------------ */
+
+.maps{
+display: flex;
+justify-content: center;
+}
+
+/* ---------INFOENVIOS------------------- */
+
+.envios{
+text-align: center;
+}
+
+main h2{
+text-align: center;
+color:  rgb(18, 4, 71);
+}
+
+/* **********PRODUCTOS*************************************** */
+.remeras-productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.productos img{
+    max-width: 200px;
+}
+
+
+/* ***********CONTACTOS************************* */
+.container_form{
+display: grid;
+grid-template-columns: 200px;
+justify-content: center;
+}
+
+.contactos{
+margin: 20px;
+}
+
+/* *********FOOTER************************************************************ */
+
+footer{
+display: flex;
+justify-content: center;
+height: 30vh;
+}
+footer h3{
+color: rgb(5, 5, 97);
+text-align: center;
+}
+header, footer{
+background-color: aliceblue;
+}
+footer div a{
+padding: 10px;
+}
+footer div a:hover{
+    background-color: rgb(18, 4, 71);
+    color: white;
+}
+::selection{
+    background-color: rgb(18, 4, 71) ;
+    color: aliceblue;
+}
+
+
+
+@media(max-width:500px){
+    header{
+        justify-content: space-around;
+        flex-direction: column;
+        height: 30vh;
+    }
+    header img{
+        width: 70px;
+    }
+    header nav ul{
+        display: flex ;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .cards-inicio{
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .remeras-con-precio img{
+        width: 80px;
+    }
+
+.maps{
+display: flex;
+justify-content: center;
+
+}
+
+    .remeras-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .productos img{
+    max-width: 200px;
+}
+
+
+
+    footer{
+        height: 20vh;
+    }
+    footer div a{
+        padding: 10px;
+    }
+
+}
+
