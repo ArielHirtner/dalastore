@@ -113,17 +113,16 @@ footer div a:hover{
 
 @media(max-width:500px){
     header{
-        justify-content: space-around;
+        justify-content: start;
         flex-direction: column;
-        height: 30vh;
+        height: 60vh;
     }
     header img{
-        width: 70px;
+        width: 50px;
     }
     header nav ul{
         display: flex ;
-        flex-wrap: wrap;
-        gap: 10px;
+        gap: 0px;
     }
 
     .cards-inicio{
