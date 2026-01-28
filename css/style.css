@@ -2,11 +2,10 @@
 /* **************************HEADER**********************************/
 header{
 display: flex;
-justify-content: space-evenly;
-align-items: center;
-height: 20vh;
-position: sticky;
-top: 0;
+justify-content: space-between;
+padding: 5px 15px;
+height: auto;
+min-height: 60px;
 z-index: 1000;
 }
 
@@ -18,7 +17,7 @@ gap: 40px
 
 }
 header nav ul li a:hover{
-    background-color: rgb(34, 13, 108);
+    background-color: rgb(67, 31, 198);
     color: white;
 }
 .color-enlace{
@@ -32,11 +31,10 @@ header nav ul li a:hover{
 
 /* -----------CARD---------------------- */
 
-.cards-inicio{
+.container-productos{
 display: flex;
-justify-content: center;
+align-items: center;
 gap: 30px;
-margin-bottom: 60px;
 }
 
 .remeras-con-precio img{
@@ -50,10 +48,14 @@ display: flex;
 justify-content: center;
 }
 
-/* ---------INFOENVIOS------------------- */
+/* ---------ENVIOS------------------- */
 
 .envios{
+    background-color: rgb(242, 239, 244);
 text-align: center;
+margin: 30px;
+padding: 40px;
+
 }
 
 main h2{
@@ -62,25 +64,47 @@ color:  rgb(18, 4, 71);
 }
 
 /* **********PRODUCTOS*************************************** */
-.remeras-productos{
+.container-productos{
+    background-color: rgb(242, 239, 244);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    text-align: center;
+    
+}
+.productos{
+    background-color: rgb(178, 178, 186);
+    border-radius: 10px;
+    margin-bottom: 30px;
+
 }
 .productos img{
-    max-width: 200px;
+    max-width: 190px;
+    
 }
-
 
 /* ***********CONTACTOS************************* */
 .container_form{
 display: grid;
 grid-template-columns: 200px;
-justify-content: center;
+place-content: center;
 }
-
 .contactos{
 margin: 20px;
+}
+.container-form{
+    background-color:  rgb(178, 178, 186);
+    display: grid;
+    place-content: center;
+    margin: 80px;
+    padding: 80px;
+    margin-bottom: 50px;
+}
+.container-6{
+    background-color: rgb(178, 178, 186);
+    margin: 80px;
+    padding: 40px;
+    
 }
 
 /* *********FOOTER************************************************************ */
@@ -101,8 +125,7 @@ footer div a{
 padding: 10px;
 }
 footer div a:hover{
-    background-color: rgb(18, 4, 71);
-    color: white;
+    background-color: rgb(118, 88, 225);
 }
 ::selection{
     background-color: rgb(18, 4, 71) ;
@@ -116,7 +139,6 @@ footer div a:hover{
         position: relative;
         justify-content: start;
         flex-direction: column;
-        height: 60vh;
     }
     header img{
         width: 50px;
@@ -125,15 +147,20 @@ footer div a:hover{
         display: flex ;
         gap: 0px;
     }
+    
+    .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
-    .cards-inicio{
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 50px;
+    }
+
+    .remeras-con-precio{
+        text-align: center;
     }
 
     .remeras-con-precio img{
-        width: 80px;
+        width: 90px;
     }
 
 .maps{
@@ -141,15 +168,22 @@ display: flex;
 justify-content: center;
 
 }
-
-    .remeras-productos{
+.container-productos{
+    background-color: rgb(242, 239, 244);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    }
+    text-align: center;
+    
+}
+.productos{
+    background-color: rgb(178, 178, 186);
+    border-radius: 10px;
+    margin-bottom: 40px;
 
-    .productos img{
-    max-width: 200px;
+}
+.productos img{
+    max-width: 100px;
+    
 }
 
 
