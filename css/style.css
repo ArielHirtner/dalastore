@@ -31,9 +31,8 @@ header nav ul li a:hover{
 
 /* -----------CARD---------------------- */
 
-.container-productos{
+.container{
 display: flex;
-align-items: center;
 gap: 30px;
 }
 
