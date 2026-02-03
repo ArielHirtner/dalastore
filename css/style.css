@@ -33,7 +33,12 @@ header nav ul li a:hover{
 
 .container{
 display: flex;
+text-align: center;
+margin: 50px;
 gap: 30px;
+}
+.remeras-con-precio{
+    padding: 2px;
 }
 
 .remeras-con-precio img{
