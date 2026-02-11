@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+main{
+    .maps{
+        @include flex-base(center,null);
+        padding: 60px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .envios{
+        text-align: center;
+        margin: 30px;
+        padding: 40px;
+    }
+    .container-6{
+        margin: 60px;
+        padding: 40px;
+        .mi-boton-personalizado{
+            margin: 20px;
+            background-color: $color-subtitle;
+            color: $bg-enlaces;
+        }
+    }
+    .container-form{
+        display: grid;
+        place-content: center;
+        padding: 70px;
+        margin-bottom: 40px;
+        .mi-boton-personalizado{
+            margin: 10px;
+            background-color: $color-subtitle;
+            color: $bg-enlaces;
+        }
+    }
+    &::selection{
+        background-color: $bg-selection;
+        color:$color-selection;
+    }
+}

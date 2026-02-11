@@ -11,11 +11,14 @@
 </head>
 <body>
     <!-------------HEADER----------->
-        <header>
+    <header>
         
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <img src="../img/logo-Dala.png" alt="logo-dala">
+                  
+                <a href="../index.html">
+                    <img src="../img/logo-Dala.png" alt="logo-dala">
+                </a>
 
                 <button class="navbar-toggler" type="button"        data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
@@ -46,9 +49,9 @@
                         </li>
                     </ul>
 
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <form class="search-form" role="search">
+                        <input class="search" type="search" placeholder="busca aqui"/>
+                        <button class="search-button" type="submit">Buscar</button>
                     </form>
 
                 </div>
@@ -63,24 +66,17 @@
         <h2>Registrate</h2>
         <form class="container-form">
         
-            <div class="input-group">
-        
-                <span class="input-group-text">Nombre y Apellido</span>
-                <input type="text" aria-label="First name" class="form-control">
-                <input type="text" aria-label="Last name" class="form-control">
             </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">contraseña</label>
+                </div>
         
             </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">contraseña</label>
-            </div>
-        
-        
             <div>
                 <h3>Quiero recibir promociones y noticias a través de:</h3>
                 <div class="form-check">
@@ -92,11 +88,13 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
                     <label class="form-check-label" for="checkChecked">
-                        Whatsapp
+                            Whatsapp
                     </label>
-                    <input type="submit" value="Enviar">
+
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="mi-boton-personalizado" type="button">Enviar</button>
+                    </div>
                 </div>
-            </div>
             </div>
         </form>
     </main>
@@ -108,15 +106,22 @@
             </div>
 
             <div class="logos">
-                <img src="../img/logo-insta.jpg" alt="logo-instagram">
-                <a href="https://www.instagram.com/dala.store.tienda/" target="_blank">Instagram</a>
+                
+                <a href="https://www.instagram.com/dala.store.tienda/" target="_blank">
+                    <img src="../img/logo-insta.jpg" alt="logo-instagram">
+                </a>
 
-                <img src="../img/logo-what.jpg" alt="logo-whatsapp">
-                <a href="https://wa.me/5491126063883" target="_blank">Whatsapp</a>
+                
+                <a href="https://wa.me/5491126063883" target="_blank">
+                    <img src="../img/logo-what.jpg" alt="logo-whatsapp">
+                </a>
 
-                 <img src="../img/tiktok-logo.jpg" alt="logo-tiktok">
-                <a href="https://www.tiktok.com/@dalastoretienda" target="_blank">Tiktok</a>
+                 
+                <a href="https://www.tiktok.com/@dalastoretienda" target="_blank">
+                    <img src="../img/tiktok-logo.jpg" alt="logo-tiktok">
+                </a>
             </div>
+             <p>Sitio hecho por Dala Store</p>
         </div>
 
     </footer>      

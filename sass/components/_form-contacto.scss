@@ -1,0 +1,16 @@
+@use "../utilities/variables" as *;
+
+
+.container_form{
+    display: grid;
+    grid-template-columns: 200px;
+    place-content: center;
+    .contactos{
+        margin: 20px;
+    }
+    .mi-boton-personalizado{
+        margin: 10px;
+        background-color: $color-subtitle;
+        color: $bg-enlaces;
+    }
+}

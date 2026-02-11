@@ -1,0 +1,19 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+
+footer{
+@include flex-base(center, null);
+height: 10vh;
+   
+    .logos{
+        padding: 10px;
+    }
+   
+    &::selection{
+        background-color: $bg-selection;
+        color: $color-selection;
+    }
+    
+
+}
