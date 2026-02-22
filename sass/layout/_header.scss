@@ -3,30 +3,34 @@
 
 
 header{
-@include flex-base(space-between, null);
-padding: 5px 15px;
-height: auto;
-min-height: 60px;
-z-index: 1000;
-   
-    nav{
-        ul{
-            @include flex-base(center, null);
-            list-style: none;
-            gap: 50px;
-            li{
-                a{
-                  &:hover{
-                    background-color: $bg-enlaces;
-                  } 
-                }
-            }
-        }
+    @include flex-base(space-between, null);
+    background-color: $bg-header;
+    padding: 5px 15px;
+    height: auto;
+    min-height: 60px;
+    z-index: 1000;
+    
+    .mi-nav{
+        color: $color-header ;
+        margin-right: 5px;
+        text-decoration: none ;
+    }
+    
+    ul{
+        @include flex-base(center, null);
+        gap: 50px;
+    }
+    
+    .search-form-mio{
+        margin-left: 100px;
+
     }
     .search{
         border-radius: 5px;
         border-color: $bg-selection;
         padding: 5px 10px;
+        text-align: center;
+        
 
     }
     .search-button{
@@ -34,13 +38,5 @@ z-index: 1000;
         border-radius: 5px;
         border-color:  $bg-selection;                   
         padding: 5px 10px;
-        &:hover{
-            color: $bg-enlaces;
-            background-color: $color-text;
-        }
-    }
-    &::selection{
-        background-color: $bg-selection;
-        color: $color-selection;
     }
 }

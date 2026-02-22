@@ -4,23 +4,7 @@
   box-sizing: border-box;
 }
 
-h2 {
-  color: rgb(8, 8, 162);
-  text-align: center;
-}
-
-h3 {
-  color: rgb(8, 8, 162);
-  text-align: center;
-}
-
-p {
-  color: rgb(8, 8, 162);
-  text-align: center;
-  margin-top: 40px;
-}
-
-.container {
+.mi-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,33 +13,40 @@ p {
   gap: 70px;
 }
 
-.remeras-con-precio {
+.mi-card {
   padding: 20px;
   border-radius: 20px;
+  transition: transform 0.5s ease;
 }
-.remeras-con-precio .img {
-  width: 100px;
+.mi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px;
 }
-.remeras-con-precio p {
-  margin: 0;
+.mi-card .img {
+  width: 120px;
+}
+
+.boton-comprar {
+  color: rgb(245, 243, 243);
+  background-color: rgb(76, 78, 85);
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .container-productos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   text-align: center;
 }
-.container-productos .productos {
-  margin: 30px;
+.container-productos .producto {
+  margin: 20px;
   border-radius: 10px;
-  margin-bottom: 40px;
+  gap: 30px;
 }
-.container-productos .productos img {
-  max-width: 190px;
-}
-.container-productos .productos p {
-  margin: 0;
+.container-productos .producto .mi-card-text {
+  margin-bottom: 5px;
 }
 
 .container_form {
@@ -68,53 +59,60 @@ p {
 }
 .container_form .mi-boton-personalizado {
   margin: 10px;
-  background-color: rgb(8, 8, 162);
+  background-color: rgb(0, 0, 0);
   color: rgb(227, 224, 254);
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  background-color: rgb(5, 5, 5);
   padding: 5px 15px;
   height: auto;
   min-height: 60px;
   z-index: 1000;
 }
-header nav ul {
+header .mi-nav {
+  color: rgb(233, 233, 226);
+  margin-right: 5px;
+  text-decoration: none;
+}
+header ul {
   display: flex;
   justify-content: center;
-  list-style: none;
   gap: 50px;
 }
-header nav ul li a:hover {
-  background-color: rgb(227, 224, 254);
+header .search-form-mio {
+  margin-left: 100px;
 }
 header .search {
   border-radius: 5px;
-  border-color: rgb(5, 5, 97);
+  border-color: rgba(16, 16, 138, 0.514);
   padding: 5px 10px;
+  text-align: center;
 }
 header .search-button {
   border: none;
   border-radius: 5px;
-  border-color: rgb(5, 5, 97);
+  border-color: rgba(16, 16, 138, 0.514);
   padding: 5px 10px;
 }
-header .search-button:hover {
-  color: rgb(227, 224, 254);
-  background-color: rgb(8, 8, 162);
-}
-header::selection {
-  background-color: rgb(5, 5, 97);
-  color: aliceblue;
-}
 
-main .maps {
-  display: flex;
-  justify-content: center;
-  padding: 60px;
-  margin-top: 40px;
-  margin-bottom: 30px;
+main h2 {
+  color: rgba(0, 0, 0, 0.582);
+  text-align: center;
+  margin-top: 10px;
+}
+main h3 {
+  color: rgb(233, 233, 226);
+  text-align: center;
+}
+main p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin: 0px;
 }
 main .envios {
   text-align: center;
@@ -127,7 +125,7 @@ main .container-6 {
 }
 main .container-6 .mi-boton-personalizado {
   margin: 20px;
-  background-color: rgb(8, 8, 162);
+  background-color: rgb(0, 0, 0);
   color: rgb(227, 224, 254);
 }
 main .container-form {
@@ -138,25 +136,37 @@ main .container-form {
 }
 main .container-form .mi-boton-personalizado {
   margin: 10px;
-  background-color: rgb(8, 8, 162);
+  background-color: rgb(0, 0, 0);
   color: rgb(227, 224, 254);
-}
-main::selection {
-  background-color: rgb(5, 5, 97);
-  color: aliceblue;
 }
 
 footer {
   display: flex;
-  justify-content: center;
-  height: 10vh;
+  justify-content: space-evenly;
+  background-color: rgb(5, 5, 5);
+  color: rgb(233, 233, 226);
+  text-align: center;
+  height: 50vh;
 }
 footer .logos {
-  padding: 10px;
+  margin-top: 20px;
 }
-footer::selection {
-  background-color: rgb(5, 5, 97);
-  color: aliceblue;
+footer .logos .mi-logo {
+  color: rgb(233, 233, 226);
+  margin: 10px;
+  gap: 20px;
+  text-decoration: none;
+  border: none;
+}
+footer .ubicacion {
+  margin-top: 20px;
+}
+footer .ubicacion .maps {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 500px) {
@@ -172,41 +182,44 @@ footer::selection {
     display: flex;
     gap: 0px;
   }
-  header::selection {
-    background-color: rgb(5, 5, 97);
-    color: aliceblue;
+  header .search-form-mio {
+    margin: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
   }
-  main h2 {
-    text-align: center;
-    color: rgb(18, 4, 71);
-  }
-  main .container {
+  main .mi-container {
     display: flex;
     flex-direction: column;
     margin: 0;
     gap: 0px;
   }
-  main .container .remeras-con-precio {
+  main .mi-container .mi-card {
     text-align: center;
   }
-  main .container .remeras-con-precio img {
-    max-width: 140px;
+  main .mi-container .mi-card img {
+    width: 50%;
+    height: auto;
   }
-  main .maps {
-    display: flex;
-    justify-content: center;
+  main .mi-container .mi-card:hover {
+    transform: none;
+    box-shadow: none;
   }
   main .container-productos {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  main .container-productos .productos {
+  main .container-productos .producto {
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
-  main .container-productos .productos img {
-    width: 170px;
+  main .container-productos .producto img {
+    width: 50%;
+    height: auto;
   }
   main .container_form {
     display: grid;
@@ -228,23 +241,26 @@ footer::selection {
     padding: 20px;
     margin-bottom: 70px;
   }
-  main::selection {
-    background-color: rgb(5, 5, 97);
-    color: aliceblue;
-  }
   footer {
-    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    gap: 5px;
   }
   footer .logos {
-    margin-top: 30px;
+    margin-top: 5px;
   }
-  footer img {
-    width: 80px;
+  footer .logos .mi-logo {
+    margin: 10px;
+    text-decoration: none;
+    border: none;
   }
-  footer::selection {
-    background-color: rgb(5, 5, 97);
-    color: aliceblue;
+  footer .ubicacion {
+    margin-top: 10px;
+  }
+  footer .ubicacion .mapa {
+    width: 150px;
   }
 }
 
-/*# sourceMappingURL=style.css..map */
+/*# sourceMappingURL=style.css.map */

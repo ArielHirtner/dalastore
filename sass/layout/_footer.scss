@@ -3,17 +3,33 @@
 
 
 footer{
-@include flex-base(center, null);
-height: 10vh;
+@include flex-base(space-evenly, null);
+background-color: $bg-footer;
+color: $color-footer;
+text-align: center;
+height: 50vh;
    
     .logos{
-        padding: 10px;
+        margin-top: 20px;
+        .mi-logo{
+            color: $color-footer;
+            margin: 10px;
+            gap: 20px;
+            text-decoration: none;
+            border: none;
+        }
     }
-   
-    &::selection{
-        background-color: $bg-selection;
-        color: $color-selection;
+    .ubicacion{
+        margin-top: 20px;
+
+        .maps{
+            @include flex-base(center,null);
+            padding: 60px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
     }
+
     
 
 }

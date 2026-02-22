@@ -2,12 +2,26 @@
 @use "../utilities/mixin" as *;
 
 main{
-    .maps{
-        @include flex-base(center,null);
-        padding: 60px;
-        margin-top: 40px;
-        margin-bottom: 30px;
+    
+    h2{
+        color: $color-title; 
+        text-align: center;
+        margin-top: 10px;
     }
+
+    h3{
+        color: $color-header;
+        text-align: center;
+    }
+    p{
+        color: $color-text;
+        text-align: center;  
+        margin-top: 30px;
+        margin-bottom: 5px;
+        margin: 0px ;
+    }
+
+   
     
     .envios{
         text-align: center;
@@ -33,9 +47,5 @@ main{
             background-color: $color-subtitle;
             color: $bg-enlaces;
         }
-    }
-    &::selection{
-        background-color: $bg-selection;
-        color:$color-selection;
     }
 }

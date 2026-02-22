@@ -1,4 +1,3 @@
-@use "../utilities/variables" as *;
 
 @media(max-width:500px){
 
@@ -16,50 +15,61 @@
                 gap: 0px;  
             }
         }
-        &::selection{
-            background-color: $bg-selection;
-            color: $color-selection;
+        .search-form-mio{
+            margin: 0;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px ;
+            width: 100% ;
         }
+
     }
 
     main{
-        h2{
-            text-align: center;
-            color:  rgb(18, 4, 71);
-        }
-        .container{
+        .mi-container{
             display: flex;
             flex-direction: column;
             margin: 0;
             gap: 0px;
-            .remeras-con-precio{
-               text-align: center;
+           
+            .mi-card{
+                text-align: center;
+               
                 img{
-                    max-width: 140px;
+                    width: 50%;
+                    height: auto;
                 }
+                &:hover{
+                    transform:none;
+                    box-shadow: none;
+               
+                }
+
             }
         }
-        .maps{
-            display: flex;
-            justify-content: center;
 
-        }
         .container-productos{
             display: flex;
             flex-direction: column;
+            align-items: center;
             text-align: center; 
-            .productos{
+
+            .producto{
                 border-radius: 10px;
-                margin-bottom: 40px;
+                margin-bottom: 10px;
                 img{
-                    width: 170px;
+                    width: 50%;
+                    height: auto;
                 }
             }
         }
+
         .container_form{
             display: grid; 
             grid-template-columns: 1fr;
         }
+
         .envios{
             text-align: center;
             margin: 2px;
@@ -77,23 +87,32 @@
             padding: 20px;
             margin-bottom: 70px;
         }
-        &::selection{
-            background-color: $bg-selection;
-            color: $color-selection;
-        }
+        
     }
     footer{
-        height: 30vh;
-
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        gap: 5px;
+   
         .logos{
-        margin-top: 30px;
+           margin-top: 5px;
+
+            .mi-logo{
+                margin: 10px;
+                text-decoration: none;
+                border: none;
+            }
         }
-        img{
-            width: 80px;
+        .ubicacion{
+        margin-top: 10px;
+        .mapa{
+            width: 150px;
         }
-        &::selection{
-            background-color: $bg-selection;
-            color: $color-selection;
         }
+      
     }
+
+
+
 }

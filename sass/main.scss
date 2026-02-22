@@ -1,6 +1,6 @@
-@use "base/reset";
-@use "base/tipografias";
+@use "utilities/variables" as *;
 
+@use "base/reset";
 
 @use "components/cards-generales";
 @use "components/form-contacto";
